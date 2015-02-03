@@ -1,0 +1,11 @@
+<template name="eventItem">
+  <div class="event">
+    <div class="event-content">
+      <div id="eventTitle">
+        <h3>{{title}}</h3>{{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
+      </div>
+      <h4 id="eventDate">{{formatEventDate eventDate}}</h4>
+    </div>
+    <a href="{{pathFor 'eventPage'}}" class="discuss btn btn-default">Show Event</a>
+  </div>
+</template>
