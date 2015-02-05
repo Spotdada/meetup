@@ -1,0 +1,15 @@
+<template name="PeopleList">
+    {{#each people}}
+        {{#with profile}}
+            {{>Dude}}
+        {{/with}}
+    {{/each}}
+</template>
+
+<template name="Dude">
+    <div class="list-group">
+        <a href="{{pathFor "profile.show"}}" class="list-group-item">
+            {{name}}
+        </a>
+    </div>
+</template>

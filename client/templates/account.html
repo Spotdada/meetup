@@ -1,0 +1,12 @@
+<template name="AccountInfo">
+    {{#with currentUser}}
+        <li><a href="{{pathFor 'profile.edit'}}">{{profile.name}}</a></li>
+    {{/with}}
+    <li><a id="logout" href="#"><span class="glyphicon glyphicon-log-out"></span></a></li>
+</template>
+
+<template name="Login">
+    <div class="alert alert-info" role="alert">Please login</div>
+    <button type="button" id="facebook-login" class="btn btn-primary">Facebook</button>
+    <button type="button" id="google-login" class="btn btn-primary">Google</button>
+</template>

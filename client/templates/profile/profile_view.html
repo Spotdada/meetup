@@ -1,0 +1,15 @@
+<template name="ProfileView">
+    <div class="page-header">
+        <h3>{{name}}</h3>
+    </div>
+
+    <div>
+        {{#if gender}}
+            Sex: {{genderTitle gender}}<br>
+        {{/if}}
+        {{#if categories.length}}
+            interests: {{prettyCategories}}<br>
+        {{/if}}
+    </div>
+    <button type="button" class="btn cancel">Done</button>
+</template>

@@ -1,0 +1,12 @@
+<template name="EventCreate">
+    {{#autoForm schema="EventSchema" id="createEventForm" type="method" meteormethod="createEvent"}}
+        {{> afQuickField name="title"}}
+        {{> afQuickField name="description"}}
+        {{> afQuickField name="categoryId"}}
+        {{> afFormGroup id="tags-field" name="tags"}}
+        {{> afQuickField id="address-field" name="address"}}
+        {{> afQuickField id="datetime-field" name="datetime"}}
+        <button type="submit" class="btn btn-primary">create</button>
+        <button type="button" class="btn cancel">Cancel</button>
+    {{/autoForm}}
+</template>

@@ -4,12 +4,19 @@
 # but you can also edit it by hand.
 
 meteor-platform
-mizzao:bootstrap-3
-underscore
-
+accounts-facebook
+ian:bootstrap-3
 iron:router
-sacha:spin
-ian:accounts-ui-bootstrap-3
-accounts-password
-mrt:moment
+coffeescript
+aldeed:autoform
+aldeed:collection2
+anti:i18n
+aldeed:autoform-select2
+zimme:select2-bootstrap3-css
+natestrauser:select2
+maxharris9:meteor-bootstrap-slider
 tsega:bootstrap3-datetimepicker
+rzymek:moment-locale-ru
+aldeed:autoform-bs-datetimepicker
+service-configuration
+accounts-google

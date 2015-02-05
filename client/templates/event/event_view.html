@@ -1,0 +1,44 @@
+<template name="EventView">
+    <div class="page-header">
+        <h3>{{title}}
+            <small>{{eventTime}}</small>
+        </h3>
+    </div>
+
+    <p><strong>{{categoryTitle}}</strong> {{niceTags}}</p>
+    <pre>{{description}}</pre>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">participants</div>
+        <div class="panel-body">
+            <div class="list-group">
+                {{#each eventParty}}
+                    <a href="{{pathFor 'profile.show'}}" class="list-group-item">
+                        {{profile.name}}
+                        {{#if isLeader ..}}
+                            <span class="badge">organizer</span>
+                        {{/if}}
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    {{#if canJoin}}
+        <button type="button" class="btn btn-success" id="join-btn">join</button>
+    {{/if}}
+
+    {{#if canLeave}}
+        <button type="button" class="btn btn-warning" id="leave-btn">Leave</button>
+    {{/if}}
+
+    <h5>Comments</h5>
+    <ul class="list-group">
+        {{#each comments}}
+            {{>CommentItem}}
+        {{/each}}
+    </ul>
+
+    {{>CommentCreate}}
+
+</template>

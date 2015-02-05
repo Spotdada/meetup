@@ -1,0 +1,18 @@
+<template name="CommentItem">
+    <li class="list-group-item">
+        <span class="list-group-item-heading">{{author.profile.name}} wrote {{submitDate}}</span>
+        <p list-group-item-text>
+            <pre>{{text}}</pre>
+        </p>
+    </li>
+</template>
+
+<template name="CommentCreate">
+    {{#autoForm schema="CommentSchema" id="createCommentForm" type="method" meteormethod="createComment"}}
+        {{> afQuickField name="eventId"}}
+        {{> afQuickField name="text"}}
+        <button type="submit" class="btn btn-primary">comment</button>
+        <button type="button" class="btn cancel">ago</button>
+    {{/autoForm}}
+</template>
+
